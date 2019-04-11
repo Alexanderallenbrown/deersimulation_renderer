@@ -6,7 +6,7 @@ from math import *
 #from numpy import *
 from bge import logic
 global  suspension,controller, car, cube, scene, f,k,initialP,flen,fname,carstate
-
+from makevideo import makeVideo
 import os
 
 #initialize the counting index for the file line
@@ -93,8 +93,10 @@ def main():
     else:
         k=0
         f.close()
-        f=open(fname,'r')
-        t,carstate = procline(f)
+        bge.logic.endGame()
+        makeVideo()
+        # f=open(fname,'r')
+        # t,carstate = procline(f)
 
     cube = controller.owner
     initialP = cube.worldPosition

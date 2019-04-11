@@ -2,3 +2,4 @@ __pycache__
 *.blend1
 *.blend~
 *.blend1~
+bge_rendered/*.png
